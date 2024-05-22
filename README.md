@@ -19,3 +19,5 @@
 - VITE_NAVER_API_URL=https://openapi.naver.com
 
 - VITE_NAVER_API_URL의 경우 로컬에서는 CORS 문제 해결을 위해 Proxy Server 설정이 되어 있어서 그러함
+
+- 위 설정으로도 문제 발생 시 VITE_NAVER_API_URL=/api 로 변경하면 버셀 서버리스가 동작함 (/api/proxy.js, ./vercel.json 파일 참고)
