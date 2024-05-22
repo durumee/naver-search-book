@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./NaverBook.module.css";
 const VITE_NAVER_API_CLIENT_ID = import.meta.env.VITE_NAVER_API_CLIENT_ID;
 const VITE_NAVER_API_CLIENT_SECRET = import.meta.env.VITE_NAVER_API_CLIENT_SECRET;
+const VITE_NAVER_API_URL = import.meta.env.VITE_NAVER_API_URL;
 
 const NaverBook = () => {
     const [query, setQuery] = useState("2024");
@@ -11,7 +12,7 @@ const NaverBook = () => {
     useEffect(() => {
         const fetchData = async () => {
             const data = await fetch(
-                `/api/v1/search/book.json?query=${query}&display=50`, {
+                `${VITE_NAVER_API_URL}/v1/search/book.json?query=${query}&display=50`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
