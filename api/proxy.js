@@ -1,6 +1,6 @@
-const { createProxyMiddleware } = require('http-proxy-middleware');
+import { createProxyMiddleware } from 'http-proxy-middleware';
 
-module.exports = (req, res) => {
+export default (req, res) => {
   const proxy = createProxyMiddleware({
     target: 'https://openapi.naver.com',
     changeOrigin: true,
@@ -8,8 +8,11 @@ module.exports = (req, res) => {
       '^/api': '', // /api로 시작하는 경로를 제거
     },
     onProxyReq: (proxyReq, req, res) => {
-      proxyReq.setHeader('X-Naver-Client-Id', process.env.VITE_NAVER_CLIENT_ID);
-      proxyReq.setHeader('X-Naver-Client-Secret', process.env.VITE_NAVER_CLIENT_SECRET);
+      const clientId = process.env.NAVER_CLIENT_ID;
+      const clientSecret = process.env.NAVER_CLIENT_SECRET;
+
+      proxyReq.setHeader('X-Naver-Client-Id', clientId);
+      proxyReq.setHeader('X-Naver-Client-Secret', clientSecret);
     },
   });
 
