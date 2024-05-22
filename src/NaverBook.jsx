@@ -4,10 +4,6 @@ const VITE_NAVER_API_CLIENT_ID = import.meta.env.VITE_NAVER_API_CLIENT_ID;
 const VITE_NAVER_API_CLIENT_SECRET = import.meta.env.VITE_NAVER_API_CLIENT_SECRET;
 const VITE_NAVER_API_URL = import.meta.env.VITE_NAVER_API_URL;
 
-console.log(VITE_NAVER_API_CLIENT_ID)
-console.log(VITE_NAVER_API_CLIENT_SECRET)
-console.log(VITE_NAVER_API_URL)
-
 const NaverBook = () => {
     const [query, setQuery] = useState("2024");
     const [books, setBooks] = useState([]);
@@ -58,6 +54,7 @@ const NaverBook = () => {
                 />
             </div>
             <h1>&ldquo;{query}&rdquo; 책 소개</h1>
+            <pre>{VITE_NAVER_API_CLIENT_ID}_{VITE_NAVER_API_CLIENT_SECRET}_{VITE_NAVER_API_URL}</pre>
             {books.map((item, index) => {
                 return (
                     <div className={styles.bookItem} key={index}>
