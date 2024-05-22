@@ -1,0 +1,18 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <title>Crane Icon</title>
+  <g fill="none" stroke="black" stroke-width="2">
+    <!-- Head and Beak -->
+    <path d="M50 20 Q52 25 55 23 Q58 20 55 18 Q52 15 50 20 Z" fill="white"/>
+    <line x1="55" y1="18" x2="60" y2="10" stroke="black" stroke-width="1"/>
+    <!-- Neck -->
+    <path d="M50 20 C45 30 55 40 50 50" />
+    <!-- Body -->
+    <path d="M50 50 C30 40 30 70 50 80 C70 70 70 40 50 50 Z" fill="white"/>
+    <!-- Legs -->
+    <line x1="50" y1="80" x2="45" y2="95" />
+    <line x1="50" y1="80" x2="55" y2="95" />
+    <!-- Wings -->
+    <path d="M50 50 C40 40 20 50 30 60 C20 70 40 70 50 60 Z" fill="white" />
+    <path d="M50 50 C60 40 80 50 70 60 C80 70 60 70 50 60 Z" fill="white" />
+  </g>
+</svg>
